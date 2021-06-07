@@ -20,4 +20,4 @@ function HeaderMain() {
     )
 }
 
-export default HeaderMain
+export default HeaderMain;

@@ -23,7 +23,7 @@ function Navbar() {
               </li>
               
               <li class="nav-item">
-                <a class="nav-link  spaceNav " href="#">GetScheduled</a>
+                <a class="nav-link  spaceNav " href="/appoinment">GetScheduled</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link spaceNav  " href="#">LogIn</a>

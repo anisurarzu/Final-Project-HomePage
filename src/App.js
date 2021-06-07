@@ -6,7 +6,13 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
+import Appoinment from './Components/Appoinment/Appoinment/Appoinmenet';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 import Home from './Components/Home/Home/Home';
+import Scholar from './Components/Scholar/Scholar/Scholar';
+
+
 
 
 function App() {
@@ -14,10 +20,19 @@ function App() {
    <Router>
      <Switch>
        <Route exact path="/">
-          <Home>
-
-          </Home>
+          <Home></Home>
        </Route>
+       <Route path='/appoinment'>
+         <Appoinment></Appoinment>
+       </Route>
+       <Route path='/scholar/question'>
+         <Scholar></Scholar>
+       </Route>
+       
+       
+       
+
+       
      </Switch>
    </Router>
   );
