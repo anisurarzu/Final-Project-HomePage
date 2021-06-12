@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Header from '../Header/Header'
 import ScholarList from '../ScholarList/ScholarList'
 
@@ -14,6 +15,9 @@ function Home() {
             <Header></Header>
             <Services></Services>
             <ScholarList></ScholarList>
+            
+            
+            
             
       
 

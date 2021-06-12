@@ -1,41 +1,38 @@
 import React from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import "./Navbar.css";
 
 
 function Navbar() {
     return (
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto ">
-              <li class="nav-item">
-                <a class="nav-link spaceNav   active" aria-current="page" href="/home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link spaceNav  " href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link spaceNav  " href="#">GetSchedule</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link  spaceNav " href="/sendquestion">SendQuestion</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link spaceNav  " href="#">LogIn</a>
-              </li>
-            
-             
-            </ul>
-           
-          </div>
-        </div>
-      </nav>
-    )
-}
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav ml-auto">
+                    <li className="nav-item active">
+                        <Link  className="spaceNav nav-link mr-5" to="/">Home</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="spaceNav nav-link mr-5" to="#">About</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="spaceNav nav-link mr-5" to="/getschedule">GetSchedule</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="spaceNav nav-link mr-5 " to="/sendQuestion">Send Question</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="spaceNav nav-link mr-5 " to="/login">LogIn</Link>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    );
+};
 
 export default Navbar;

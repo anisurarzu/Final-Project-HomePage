@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
-import './LogIn.css'
+import './LogIn.css';
+import { Button } from '@material-ui/core';
+import { UserContext } from '../../App';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useLocation } from 'react-router-dom';
 
 firebase.initializeApp(firebaseConfig);
 
@@ -16,6 +20,12 @@ function LogIn() {
         password:'',
         photo:''
     })
+
+    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+    const history =useHistory();
+    const location = useLocation();
+    const { from } = location.state || { from: { pathname: "/" } };
+
 
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     const fbProvider = new firebase.auth.FacebookAuthProvider();
@@ -138,6 +148,8 @@ function LogIn() {
                 newUserInfo.error ='';
                 newUserInfo.success = true;
                 setUser(newUserInfo);
+                setLoggedInUser(newUserInfo);
+                history.replace(from);
                 
             })
             .catch((error) => {
@@ -172,9 +184,10 @@ function LogIn() {
             <button onClick={handleLogin} className='btn btn-primary'>Login</button>
         }
         <br />
-        <button onClick={handleFblogin}>
-            log in Using Facebook
-        </button>
+        
+        <Button variant="contained" color="primary" onClick={handleFblogin}>
+        log in Using Facebook</Button>
+        <br></br>
 
             {
                 user.isSignIn && <div>
@@ -184,18 +197,18 @@ function LogIn() {
                 </div>
             }
 
-            <h1>Our Own Authenticaion Sytstem</h1>
+            
 
             <input type="checkbox" name='newUser' onChange={()=>setNewUser(!newUser)}/>
             <label htmlFor="newUser">New User Registration</label>
 
-            <form onSubmit={handleSubmit}>
-            {newUser && <input type="text" name='name' onBlur={handleBlur} placeholder='Your name' />} <br />
-            <input type="text" name='email' onBlur={handleBlur} placeholder='Write Your email Address' required /> 
+            <form className='form-group form-design rounded shadow-lg p-3 mb-5 bg-white rounded' onSubmit={handleSubmit}>
+            {newUser && <input class="form-control" type="text" name='name' onBlur={handleBlur} placeholder='Your name' />} <br />
+            <input class="form-control" type="text" name='email' onBlur={handleBlur} placeholder='Write Your email Address' required /> 
             <br />
-            <input type="password" name='password' onBlur={handleBlur} placeholder='Write Your Password' required />
+            <input class="form-control" type="password" name='password' onBlur={handleBlur} placeholder='Write Your Password' required />
             <br />
-             <input type="submit" value={newUser? 'Sign Up':'Sign In'} />
+             <input  class="form-control btn" type="submit" value={newUser? 'Registration ':'Log In'} />
             </form>
             <p style={{color:'red'}}>{user.error}</p>
             

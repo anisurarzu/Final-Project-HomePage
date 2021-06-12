@@ -1,4 +1,7 @@
-
+.scholarcard{
+  margin: 20px;
+  padding: 20px;
+}
 .loading {
   font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
   text-transform:uppercase;
