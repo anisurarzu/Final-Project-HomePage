@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Navbar from '../../Shared/Navbar/Navbar';
 import AppoinmentHeader from '../AppoinmentHeader/AppoinmentHeader';
 import FreeSchedule from '../FreeSchedule/FreeSchedule';
+import UserAnswer from './UserAnswer/UserAnswer';
 
 
 
@@ -23,7 +24,7 @@ const Appoinment = () => {
            
             <AppoinmentHeader handleDateChange={handleDateChange}></AppoinmentHeader>
             <FreeSchedule date={selectedDate}></FreeSchedule>
-            
+            <UserAnswer></UserAnswer>
             
             
         </div>

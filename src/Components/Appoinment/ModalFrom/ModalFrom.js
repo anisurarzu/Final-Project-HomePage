@@ -64,7 +64,7 @@ const customStyles = {
                  
                   <option value="male">Male</option>
                   <option value="female">Female</option>
-                   <option value="female">Other</option>
+                  <option value="female">Other</option>
                   
                   
               </select>

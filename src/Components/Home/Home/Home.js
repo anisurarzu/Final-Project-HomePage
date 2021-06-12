@@ -1,7 +1,10 @@
 import React from 'react'
 import Header from '../Header/Header'
+import ScholarList from '../ScholarList/ScholarList'
+
 
 import Services from '../Services/Services'
+
 
 
 function Home() {
@@ -10,8 +13,9 @@ function Home() {
             
             <Header></Header>
             <Services></Services>
+            <ScholarList></ScholarList>
             
-   
+      
 
         </div>
     )

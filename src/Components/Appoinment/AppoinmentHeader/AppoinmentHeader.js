@@ -1,5 +1,8 @@
 import React from 'react';
 import quranman from "../../../images/quranman.jpg";
+import banner from '../../../images/banner.png';
+import moon from '../../../images/moon.png';
+import './AppoinmenHeader.css'
 //import Calendar from 'react-calendar';
 //import 'react-calendar/dist/Calendar.css';
 
@@ -9,25 +12,17 @@ import quranman from "../../../images/quranman.jpg";
 function AppoinmentHeader(handleDateChange) {
     
     return (
-        <main style={{height:'600px'}} className="row d-flex align-items-center ">
+        <main style={{height:'500px'}} className="row d-flex align-items-center ">
+
             <div className="col-md-4 offset-md-1 " >
-                <h1>Send Your Question</h1>
                 
+                <img className='img' src={banner} alt="" />
             
             
-                <form action="#">
-                        
-                    <input type="text" placeholder='name' />   
-                    <br />
-                    <input type="text-area" placeholder='write your question' />
-                    <br />
-                    <button className="btn btn-success">Submit</button> 
-                        
-                </form>
-                </div>
+            </div>
         
             <div className="col-md-6">
-                <img src={quranman} alt="" className="img-fluid" />
+                <img className='img-fluid' src={quranman} alt=""  />
             </div>
     </main>
     )

@@ -11,19 +11,30 @@ import Appoinment from './Components/Appoinment/Appoinment/Appoinmenet';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import Home from './Components/Home/Home/Home';
 import Scholar from './Components/Scholar/Scholar/Scholar';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+import LogIn from './Components/LogIn/LogIn';
+import GetSchedule from './Components/GetSchedule/GetSchedule';
+
 
 
 
 
 function App() {
   return (
-   <Router>
+    <div>
+       <Router>
      <Switch>
        <Route exact path="/">
           <Home></Home>
        </Route>
-       <Route path='/appoinment'>
+       <Route path='/sendquestion'>
          <Appoinment></Appoinment>
+       </Route>
+        <Route path='/login'>
+        <LogIn></LogIn>
+       </Route>
+       <Route path='/getschedule'>
+        <GetSchedule></GetSchedule>
        </Route>
        <Route path='/scholar/question'>
          <Scholar></Scholar>
@@ -35,6 +46,15 @@ function App() {
        
      </Switch>
    </Router>
+   <MessengerCustomerChat
+    pageId="259964438007932"
+    appId="587128588925497"
+    
+  />
+    </div>
+
+  
+   
   );
 }
 

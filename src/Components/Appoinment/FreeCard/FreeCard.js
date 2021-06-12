@@ -16,9 +16,9 @@ function FreeCard({booking}) {
         <div className="card p-3 shadow-sm p-3 mb-5 bg-body rounded" >
             <div className="card-body text-center">
                 <h5 className="card-title text-brand">{booking.subject}</h5>
-                <h6>{booking.visitingHour}</h6>
-                <p>{booking.totalSpace} SPACES AVAILABLE</p>
-                <button onClick={openModal}  className="btn btn-success text-uppercase">Book Appointment</button>
+                
+                <h6>{booking.freeTime}</h6>
+                <button onClick={openModal}  className="btn btn-success text-uppercase">Ask Your Question</button>
                <ModalFrom modalIsOpen={modalIsOpen} appointmentOn={booking.subject} closeModal={closeModal} ></ModalFrom>
             </div>
         </div>
