@@ -8,12 +8,15 @@ import Services from '../Services/Services'
 
 
 
+
 function Home() {
     return (
         <div>
             
             <Header></Header>
             <Services></Services>
+            <h2 style={{textAlign:'center'}}>Scholar List</h2>
+          
             <ScholarList></ScholarList>
             
             

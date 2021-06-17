@@ -7,15 +7,18 @@ import ServiceDetail from '../ServiceDetail/Servicedetail';
 const serviceData=[
     {
         title: 'About Salat',
-        img:salat
+        img:salat,
+        description:''
     },
     {
         title: 'About Ramdan',
-        img:ramadan
+        img:ramadan,
+        description:''
     },
     {
         title: 'About Hajj',
-        img:kaba
+        img:kaba,
+        description:''
     }
     
 ]

@@ -17,7 +17,7 @@ function HeaderMain() {
             <div className="col-md-4 offset-md-1 " >
                 <h1 id='htag'>Learn About <br /> Islam</h1>
                 <p className="text-secondary">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, alias quos! Deserunt ipsam nemo quaerat, consectetur voluptatum quidem esse eligendi voluptate saepe dicta inventore unde nostrum, aperiam temporibus tempore molestiae!
+                 আপনি যদি কোন বিশেষজ্ঞ আলেমগণ এর শিডিউল নিতে চান কোন ইসলামিক সেমিনার কিংবা দ্বিনী কাজের সহায়তার জন্য তবে নিচের বাটনটিতে ক্লিক করে প্রয়োজনীয় তথ্যাদি দিয়ে আমাদেরকে সহোযোগিতা করুন
                 </p>
                 <button onClick={handleLogin} className="btn btn-primary btn-grad">GET SCHEDULE</button>
             </div>

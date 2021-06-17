@@ -7,8 +7,13 @@ import { Button } from '@material-ui/core';
 import { UserContext } from '../../App';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { useLocation } from 'react-router-dom';
+import islam from '../../images/islam.png';
+import moon from '../../images/moon.png';
 
-firebase.initializeApp(firebaseConfig);
+if(firebase.apps.length === 0){
+    firebase.initializeApp(firebaseConfig);
+
+}
 
 function LogIn() {
     const [newUser,setNewUser] =useState(false);
@@ -29,9 +34,13 @@ function LogIn() {
 
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     const fbProvider = new firebase.auth.FacebookAuthProvider();
-    const handleLogin=()=>{
+
+
+    const handleGoogleLogin=()=>{
+
         firebase.auth().signInWithPopup(googleProvider)
         .then(res =>{
+            
             const {displayName,photoURL,email} =res.user;
             const signInUser={
                 isSignIn:true,
@@ -40,7 +49,8 @@ function LogIn() {
                 photo:photoURL
             }
             setUser(signInUser);
-            console.log(displayName,photoURL,email);
+            
+            
         })
         .catch(err =>{
             console.log(err.message);
@@ -56,9 +66,11 @@ function LogIn() {
       
           // The signed-in user info.
           var user = result.user;
+         
       
           // This gives you a Facebook Access Token. You can use it to access the Facebook API.
           var accessToken = credential.accessToken;
+          history.replace(from);
       
           // ...
         })
@@ -178,10 +190,16 @@ function LogIn() {
     }
 
     return (
-        <div className='login'>
-        {
+        <div className='login d-flex justify-content-center'>
+
+            <div className="col-md-4">
+                
+            </div>
+
+            <div className="col-md-4">
+            {
             user.isSignIn ?<button onClick={handleLogout} className='btn btn-primary'>Logout</button>:
-            <button onClick={handleLogin} className='btn btn-primary'>Login</button>
+            <button onClick={handleGoogleLogin} className='btn btn-primary'>Login</button>
         }
         <br />
         
@@ -213,6 +231,13 @@ function LogIn() {
             <p style={{color:'red'}}>{user.error}</p>
             
             {user.success && <p style={{color:'green'}}>User {newUser ?'created':'Logged In'} Successfully</p>}
+            </div>
+
+            <div className="col-md-4">
+              
+
+            </div>
+      
         </div>
     )
 }
