@@ -1,9 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import "./Navbar.css";
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import { useContext } from 'react';
+import { UserContext } from '../../../App';
+
+
 
 
 function Navbar() {
+    const [loggedInUser,setLoggedInUser]= useContext(UserContext);
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -25,9 +32,14 @@ function Navbar() {
                     <li className="nav-item">
                         <Link className="spaceNav nav-link mr-5 " to="/sendQuestion">Send Question</Link>
                     </li>
+                    
                     <li className="nav-item">
-                        <Link className="spaceNav nav-link mr-5 " to="/login">LogIn</Link>
+                        
+                        <Button onClick={()=>{
+                            setLoggedInUser({})
+                        }} variant="contained">Log out</Button>
                     </li>
+                    
 
                 </ul>
             </div>

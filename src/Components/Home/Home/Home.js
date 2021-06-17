@@ -1,10 +1,11 @@
 import React from 'react'
 
 import Header from '../Header/Header'
-import ScholarList from '../ScholarList/ScholarList'
+
 
 
 import Services from '../Services/Services'
+import History from './History/History'
 
 
 
@@ -15,9 +16,9 @@ function Home() {
             
             <Header></Header>
             <Services></Services>
-            <h2 style={{textAlign:'center'}}>Scholar List</h2>
+            <History></History>
           
-            <ScholarList></ScholarList>
+            
             
             
             
