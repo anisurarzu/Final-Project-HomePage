@@ -14,9 +14,20 @@
     margin-right: 10%;
     padding: 10px;
 }
-.btn{
+.btn-design{
     background-color: #26b8a2;
     color: whitesmoke;
+    height: 35px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.btn-design-2{
+    margin-top: 10px;
+    
+}
+.img-design{
+    width: 20px;
+    
 }
 
 

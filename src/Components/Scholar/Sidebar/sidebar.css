@@ -1,0 +1,12 @@
+.logo{
+    width: 150px;
+    height: 150px;
+    margin-left: 25px;
+    
+}
+.sidebar-title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    color:#00cbad;
+}

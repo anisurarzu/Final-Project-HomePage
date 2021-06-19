@@ -17,7 +17,7 @@
     margin-top: 50px;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(51, 223, 223);
+    color:gray;
 }
 .paragraph{
     color: whitesmoke;
@@ -29,8 +29,15 @@
 .div-card{
     padding: 20px;
     margin: 20px;
+    
 }
 .h5{
     padding-bottom: 10px;
-    color: rgb(70, 226, 253);
+    color: rgba(46, 207, 154, 0.801);
+}
+.p{
+    color: gray;
+}
+.div-card-2{
+
 }

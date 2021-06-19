@@ -1,3 +1,6 @@
 .sidebar{
     border-right: 1px solid rgba(126, 139, 139, 0.575);
 }
+.scholar{
+    background-image:url('../../../images/shadowbg.jpg');
+}
