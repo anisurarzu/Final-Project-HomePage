@@ -1,11 +1,17 @@
 .img{
-    width: 600px;
-    height: 600px;
-    margin-right: 30px;
-    margin-bottom: 100px;
+    width: 700px;
+    height: 150px;
+    margin-right: 50px;
+    margin-bottom: 450px;
+    
 }
 .children{
     width: 200px;
     margin-left: 240px;
+    
+}
+.para-card{
+    width:2000px;
+    height: 90px;
     
 }

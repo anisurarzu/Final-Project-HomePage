@@ -26,7 +26,7 @@ function Services() {
   return (
     <section className="services-container">
       <div className="text-center">
-        <h2 style={{ color: "#17bca5" }}>Important Topics</h2>
+        <h2 className='font-mono mt-2 font-semibold' >Important Topics</h2>
       </div>
       <div className="d-flex justify-content-center">
         <div className="w-75 row mt-5">

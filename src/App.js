@@ -1,6 +1,6 @@
 import React, { createContext } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route,  } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Appoinment from "./Components/Appoinment/Appoinment/Appoinmenet";
 
@@ -18,26 +18,26 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      {/* <h3> Email:{loggedInUser.email}</h3> */}
+      
       <Router>
         <Switch>
           <Route exact path="/">
             <Home></Home>
           </Route>
 
-          <Route path="/sendquestion">
+          <PrivateRoute path="/sendquestion">
             <Appoinment></Appoinment>
-          </Route>
+          </PrivateRoute>
 
           <Route path="/login">
             <LogIn></LogIn>
           </Route>
-
+          
           <PrivateRoute path="/getschedule">
             <GetSchedule></GetSchedule>
           </PrivateRoute>
 
-          <Route path="/scholar/question">
+          <Route path="/scholarhouse">
             <Scholar></Scholar>
           </Route>
         </Switch>

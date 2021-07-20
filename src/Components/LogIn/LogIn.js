@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 
 import {
   createUser,
-  handleFblogin,
+  handleFbLogin,
   handleGoogleLogin,
   handleLogout,
   initializeLoginFrameWork,
@@ -51,7 +51,7 @@ function LogIn() {
     });
   };
   const fbLogin = () => {
-    handleFblogin().then((res) => {
+    handleFbLogin().then((res) => {
       setUser(res);
       setLoggedInUser(res);
     });
@@ -108,7 +108,7 @@ function LogIn() {
           ) : (
             <button
               onClick={googleLogin}
-              className="btn btn-outline-primary .btn-design-2 mb-2 "
+              className="btn btn-outline-primary .btn-design-2 mt-12 text-sans mb-2 "
             >
               <img className="img-design" src={google} alt="" />
               Login Using Google

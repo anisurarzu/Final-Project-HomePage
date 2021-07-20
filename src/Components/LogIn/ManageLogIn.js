@@ -30,7 +30,7 @@ export const handleGoogleLogin = () => {
     });
 };
 
-export const handleFblogin = () => {
+export const handleFbLogin = () => {
   const fbProvider = new firebase.auth.FacebookAuthProvider();
   return firebase
     .auth()

@@ -1,14 +1,23 @@
 import React from "react";
 
+// this is not a footer section
 function Footer() {
   return (
-    <div className="">
-      <footer class="page-footer font-small ">
-        <div class="footer-copyright text-center py-3 footer">
-          © 2020 Copyright:
-          <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-        </div>
-      </footer>
+    <div className="shadow  bg-gradient-to-r from-green-400 to-blue-500 ...">
+      <section class="container mx-auto text-center py-6 mb-12">
+      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+        Call to Action
+      </h1>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <h3 class="my-4 text-3xl leading-tight">
+       আপনার কোন জিজ্ঞাসা থাকলে আমাদেরকে প্রশ্ন করুন?
+      </h3>
+      <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+       Click
+      </button>
+    </section>
     </div>
   );
 }

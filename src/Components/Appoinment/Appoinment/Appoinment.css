@@ -1,0 +1,6 @@
+.new-background{
+    background-image: url('../../../images/white-lace.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

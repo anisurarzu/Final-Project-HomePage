@@ -55,9 +55,7 @@ function QuestionBank({ question }) {
 
   const deleteQuestion = (id) => {
     console.log(id);
-    fetch(`http://localhost:5000/delete/${id}`, {
-      method: "DELETE",
-    })
+    fetch(`http://localhost:5000/delete/60be75b9c709fc20d42250c5`,{ method: 'DELETE'})
       .then((res) => res.json())
       .then((res) => {
         console.log("deleted successfully");

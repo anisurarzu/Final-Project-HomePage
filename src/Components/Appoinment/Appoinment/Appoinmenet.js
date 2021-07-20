@@ -4,6 +4,7 @@ import Navbar from "../../Shared/Navbar/Navbar";
 import AppoinmentHeader from "../AppoinmentHeader/AppoinmentHeader";
 import FreeSchedule from "../FreeSchedule/FreeSchedule";
 import UserAnswer from "./UserAnswer/UserAnswer";
+import './Appoinment.css';
 
 const Appoinment = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -11,7 +12,7 @@ const Appoinment = () => {
     setSelectedDate(date);
   };
   return (
-    <div>
+    <div className='new-background'>
       <Navbar></Navbar>
 
       <AppoinmentHeader handleDateChange={handleDateChange}></AppoinmentHeader>
